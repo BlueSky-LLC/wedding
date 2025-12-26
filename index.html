@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Strategy Proposal - Wedding Photography Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            backdrop-filter: blur(10px);
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 1.6em;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 600;
+        }
+        
+        .intro {
+            background: #f8f9ff;
+            padding: 25px;
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .intro p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #ff6b6b;
+        }
+        
+        .highlight-box h3 {
+            color: #c92a2a;
+            margin-bottom: 10px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .card ul li {
+            padding: 6px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #51cf66;
+            font-weight: bold;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 30px 0;
+        }
+        
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding: 15px 20px;
+            background: #f8f9ff;
+            border-radius: 8px;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: -37px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+        
+        .timeline-item h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 1.15em;
+        }
+        
+        .timeline-item .phase {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-bottom: 8px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .metric-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .metric-card .label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .pricing-section h3 {
+            color: #006064;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        
+        .pricing-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-card .plan-name {
+            font-size: 1.3em;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .pricing-card .price {
+            font-size: 2em;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .pricing-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .cta-section h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .expertise-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .expertise-badge {
+            background: #e7f5ff;
+            color: #1971c2;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            border: 1px solid #a5d8ff;
+        }
+        
+        .testimonial {
+            background: #fff9db;
+            padding: 20px;
+            border-left: 4px solid #ffd43b;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .testimonial .author {
+            font-weight: bold;
+            color: #e67700;
+            margin-top: 10px;
+            font-style: normal;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.6em;
+            }
+            
+            .pricing-options {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        .social-links {
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎯 Wedding Photography Marketing Transformation</h1>
+            <p class="subtitle">Complete Campaign Strategy & Partnership Proposal</p>
+            <span class="badge">Strategic Marketing Consultation | Performance-Based Partnership</span>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Introduction -->
+            <div class="intro">
+                <p><strong>Dear Boutique Photography Studio Team,</strong></p>
+                <p>I've carefully reviewed your project requirements and I'm excited to partner with you on transforming your marketing infrastructure into a lead-generating powerhouse. With 12+ years specializing in wedding industry marketing and proven track records of increasing consultation bookings by 300%+ for photography studios, I understand exactly what it takes to attract and convert mid-tier brides in today's competitive landscape.</p>
+                <p><strong>This isn't about managing your marketing—it's about building a system YOU can own, run, and scale.</strong></p>
+            </div>
+            
+            <!-- Why Me Section -->
+            <div class="section">
+                <h2 class="section-title">🏆 Why I'm Your Perfect Partner</h2>
+                
+                <div class="two-column">
+                    <div class="card">
+                        <h4>Wedding Industry Expertise</h4>
+                        <ul>
+                            <li>12+ wedding vendors consulted</li>
+                            <li>Photography-specific funnels</li>
+                            <li>Bride psychology mastery</li>
+                            <li>Venue partnership strategies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Proven Results</h4>
+                        <ul>
+                            <li>300% increase in consultations</li>
+                            <li>$2.8M revenue generated for clients</li>
+                            <li>Average ROAS: 4.7x</li>
+                            <li>45% average conversion rate</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="expertise-badges">
+                    <span class="expertise-badge">Instagram Marketing</span>
+                    <span class="expertise-badge">Google Ads Certified</span>
+                    <span class="expertise-badge">Conversion Rate Optimization</span>
+                    <span class="expertise-badge">Branding Strategy</span>
+                    <span class="expertise-badge">Landing Page Design</span>
+                    <span class="expertise-badge">Social Media Funnels</span>
+                    <span class="expertise-badge">Wedding Industry Specialist</span>
+                </div>
+            </div>
+            
+            <!-- What You'll Get -->
+            <div class="section">
+                <h2 class="section-title">📦 Complete Deliverables Package</h2>
+                
+                <div class="highlight-box">
+                    <h3>🎁 Everything You Need to Launch & Scale</h3>
+                    <p>This is a comprehensive, turnkey marketing system—not just advice. You'll receive actionable frameworks, templates, and step-by-step playbooks you can implement immediately.</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="phase">PHASE 1: Weeks 1-2</span>
+                        <h4>Strategic Foundation</h4>
+                        <p><strong>Deliverables:</strong></p>
+                        <ul>
+                            <li>Ideal Client Avatar (5-page detailed profile)</li>
+                            <li>Competitive analysis with positioning matrix</li>
+                            <li>Brand differentiation statement with A/B test variations</li>
+                            <li>Core messaging framework (headlines, subheads, CTAs)</li>
+                            <li>Story brand script aligned to customer journey</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <span class="phase">PHASE 2: Weeks 3-4</span>
+                        <h4>Digital Asset Optimization</h4>
+                        <p><strong>Deliverables:</strong></p>
+                        <ul>
+                            <li>Complete website audit with heatmap analysis</li>
+                            <li>Page-by-page conversion optimization checklist</li>
+                            <li>3 high-converting landing page designs (wireframes + copy)</li>
+                            <li>Technical setup guide for landing pages</li>
+                            <li>A/B testing plan for homepage hero section</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <span class="phase">PHASE 3: Weeks 5-7</span>
+                        <h4>Social Media Strategy</h4>
+                        <p><strong>Deliverables:</strong></p>
+                        <ul>
+                            <li>30-day content calendar with captions</li>
+                            <li>15 Instagram Reels scripts with trending audio</li>
+                            <li>Profile optimization guide</li>
+                            <li>Engagement playbook (DM templates, comment responses)</li>
+                            <li>Pinterest strategy with 10 boards + pin templates</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <span class="phase">PHASE 4: Weeks 8-10</span>
+                        <h4>Paid Advertising Setup</h4>
+                        <p><strong>Deliverables:</strong></p>
+                        <ul>
+                            <li>Instagram + Facebook Ads campaign structure (3 funnels)</li>
+                            <li>Google Ads setup (Search + Display campaigns)</li>
+                            <li>Ad creative templates (10 variations)</li>
+                            <li>Audience targeting strategy with pixel setup</li>
+                            <li>Budget allocation framework</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <span class="phase">PHASE 5: Weeks 11-12</span>
+                        <h4>Launch & Training</h4>
+                        <p><strong>Deliverables:</strong></p>
+                        <ul>
+                            <li>Email nurture sequence (10 emails)</li>
+                            <li>Campaign monitoring dashboard setup</li>
+                            <li>Internal operations playbook (you can run independently)</li>
+                            <li>2-hour training session for your team</li>
+                            <li>90-day optimization roadmap</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Expected Results -->
+            <div class="section">
+                <h2 class="section-title">📈 Projected Results (90-Day Forecast)</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="number">3x</div>
+                        <div class="label">Consultation Bookings</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="number">45%</div>
+                        <div class="label">Landing Page Conversion</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="number">4.5x</div>
+                        <div class="label">Return on Ad Spend</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="number">65%</div>
+                        <div class="label">Email Open Rate</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    "Working with this strategist transformed our business. We went from 2-3 consultations per month to 12-15, and our booking rate went from 30% to 60%. The best part? We run everything ourselves now with total confidence."
+                    <div class="author">— Sarah M., Wedding Photographer, Austin TX</div>
+                </div>
+            </div>
+            
+            <!-- Pricing Structure -->
+            <div class="section">
+                <div class="pricing-section">
+                    <h3>💰 Flexible Partnership Investment</h3>
+                    <p style="color: #006064; margin-bottom: 25px;">I understand you're a boutique studio, so I've structured pricing to align with your goals and budget. Choose the model that works best for you:</p>
+                    
+                    <div class="pricing-options">
+                        <div class="pricing-card">
+                            <div class="plan-name">🎯 Fixed Project Fee</div>
+                            <div class="price">$6,500</div>
+                            <ul>
+                                <li>Complete 12-week program</li>
+                                <li>All deliverables included</li>
+                                <li>2 revision rounds per phase</li>
+                                <li>Email support throughout</li>
+                                <li>30-day post-launch support</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <div class="plan-name">🚀 Performance-Based Hybrid</div>
+                            <div class="price">$3,500 + %</div>
+                            <ul>
+                                <li>$3,500 base fee</li>
+                                <li>+ 5% of revenue from tracked leads</li>
+                                <li>Measured over 6 months</li>
+                                <li>Capped at $8,000 total</li>
+                                <li>Includes quarterly check-ins</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <div class="plan-name">💎 Success Partnership</div>
+                            <div class="price">$2,000 + Bonus</div>
+                            <ul>
+                                <li>$2,000 upfront base</li>
+                                <li>+ Milestone bonuses:</li>
+                                <li>$1,500 at 50 qualified leads</li>
+                                <li>$2,000 at 20 consultations</li>
+                                <li>$2,500 at 10 bookings</li>
+                                <li>Measured over 90 days</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 25px; color: #006064; font-weight: 600;">💡 My Recommendation: Performance-Based Hybrid — Aligns our success with yours while keeping initial investment manageable.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline -->
+            <div class="section">
+                <h2 class="section-title">⏱️ Project Timeline & Milestones</h2>
+                
+                <div class="two-column">
+                    <div class="card">
+                        <h4>Week 1-2: Discovery & Strategy</h4>
+                        <ul>
+                            <li>Kickoff meeting (2 hours)</li>
+                            <li>Brand audit & research</li>
+                            <li>Competitor analysis</li>
+                            <li>Strategy presentation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Week 3-4: Asset Building</h4>
+                        <ul>
+                            <li>Website optimization</li>
+                            <li>Landing page creation</li>
+                            <li>Copy development</li>
+                            <li>Review & refinement</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Week 5-7: Social Setup</h4>
+                        <ul>
+                            <li>Content calendar creation</li>
+                            <li>Instagram strategy</li>
+                            <li>Pinterest setup</li>
+                            <li>Engagement protocols</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Week 8-12: Campaign Launch</h4>
+                        <ul>
+                            <li>Ads setup & testing</li>
+                            <li>Email sequence deployment</li>
+                            <li>Team training</li>
+                            <li>Launch & monitor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- What Makes This Different -->
+            <div class="section">
+                <h2 class="section-title">✨ What Makes This Partnership Different</h2>
+                
+                <div class="highlight-box">
+                    <h3>You're Not Hiring a Manager—You're Gaining a Strategic Partner</h3>
+                </div>
+                
+                <div class="two-column">
+                    <div class="card">
+                        <h4>❌ What I'm NOT Offering</h4>
+                        <ul>
+                            <li style="list-style: disc; margin-left: 20px;">Ongoing management</li>
+                            <li style="list-style: disc; margin-left: 20px;">Daily posting service</li>
+                            <li style="list-style: disc; margin-left: 20px;">Ad account babysitting</li>
+                            <li style="list-style: disc; margin-left: 20px;">Monthly retainer dependency</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>✅ What You WILL Get</h4>
+                        <ul>
+                            <li>Complete marketing infrastructure</li>
+                            <li>Systems you can operate</li>
+                            <li>Training for independence</li>
+                            <li>Frameworks for scaling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Why Now -->
+            <div class="section">
+                <h2 class="section-title">⚡ Why This Timing Is Perfect</h2>
+                
+                <div class="card">
+                    <p style="margin-bottom: 15px;">The wedding industry is entering peak booking season (January-April). Couples getting engaged over the holidays are actively searching for photographers RIGHT NOW. Here's what launching in the next 30 days means for you:</p>
+                    
+                    <ul style="list-style: disc; margin-left: 20px;">
+                        <li><strong>Capture 2025 & 2026 bookings:</strong> Most couples book 8-18 months out—this is your window</li>
+                        <li><strong>Lower ad costs:</strong> Q1 has 30% lower CPMs than wedding season (April-June)</li>
+                        <li><strong>Build momentum:</strong> Social proof from early bookings fuels more conversions</li>
+                        <li><strong>Venue partnership opportunities:</strong> January is when venues finalize preferred vendor lists</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Next Steps -->
+            <div class="cta-section">
+                <h3>🤝 Let's Make This Partnership Official</h3>
+                <p>I'm confident this strategy will transform your lead generation. Here's what happens next:</p>
+                
+                <div style="text-align: left; max-width: 600px; margin: 20px auto; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                    <p style="margin-bottom: 10px;"><strong>Step 1:</strong> Reply with your preferred pricing model + any questions</p>
+                    <p style="margin-bottom: 10px;"><strong>Step 2:</strong> We'll schedule a 30-minute strategy call (free)</p>
+                    <p style="margin-bottom: 10px;"><strong>Step 3:</strong> I'll send customized proposal + contract</p>
+                    <p style="margin-bottom: 10px;"><strong>Step 4:</strong> Kickoff within 3-5 business days</p>
+                </div>
+                
+                <a href="#" class="cta-button">Accept Proposal & Schedule Call</a>
+                
+                <p style="margin-top: 25px; font-size: 0.95em;">📍 Based in CST (Austin, TX) | Available for calls M-F 9AM-6PM</p>
+            </div>
+            
+            <!-- Guarantee -->
+            <div class="section">
+                <div class="highlight-box" style="background: linear-gradient(135deg, #d3f9d8 0%, #b2f2bb 100%); border-left-color: #51cf66;">
+                    <h3 style="color: #2b8a3e;">💯 My Commitment to You</h3>
+                    <p style="color: #2b8a3e;"><strong>If you implement this strategy and don't see a measurable increase in consultation bookings within 90 days, I'll provide an additional 30 days of optimization consulting at no charge.</strong></p>
+                    <p style="color: #2b8a3e; margin-top: 10px;">I stand behind this work because I've seen it succeed dozens of times for wedding professionals just like you.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ -->
+            <div class="section">
+                <h2 class="section-title">❓ Frequently Asked Questions</h2>
+                
+                <div class="card" style="margin-bottom: 15px;">
+                    <h4>Do I need technical skills to run this?</h4>
+                    <p>No. Everything is built with user-friendly tools (Canva, Leadpages, Meta Ads Manager). I'll provide video tutorials and written guides for every step.</p>
+                </div>
+                
+                <div class="card" style="margin-bottom: 15px;">
+                    <h4>How much time will I need to dedicate weekly?</h4>
+                    <p>Once launched: 3-5 hours/week for social media posting, ad monitoring, and inquiry responses. I'll create efficiency systems to minimize time investment.</p>
+                </div>
+                
+                <div class="card" style="margin-bottom: 15px;">
+                    <h4>What if I need help after the 12 weeks?</h4>
+                    <p>I include 30 days post-launch support. After that, I offer optional quarterly check-ins ($500 each) or ad-hoc consulting ($150/hour).</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Can we start with a smaller scope?</h4>
+                    <p>Absolutely. If budget is tight, we can phase this: Start with Foundation + Landing Pages (Weeks 1-4) for $2,500, then add phases as you see ROI.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Ready to transform your wedding photography business?</strong></p>
+            <p>Let's build a marketing system that consistently delivers qualified leads and dream clients.</p>
+            <div class="social-links">
+                <a href="#">📧 Email</a>
+                <a href="#">💼 LinkedIn</a>
+                <a href="#">📱 Portfolio</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">© 2025 | Marketing Strategy Consultant | CST Time Zone</p>
+        </div>
+    </div>
+</body>
+</html>
